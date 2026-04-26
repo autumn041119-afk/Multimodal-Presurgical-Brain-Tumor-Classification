@@ -8,7 +8,7 @@
 | `ML_experiments.ipynb` | Research | Solo modality experiments (trees) |
 | `NN_experiments.ipynb` | Research | Neural network architecture experiments |
 | `model_final.ipynb` | Production | Final ensemble model (NN + trees) |
-
+| `report.pdf`  | Report | Final report for the whole project |
 ---
 
 ## 1. data_loader.py
