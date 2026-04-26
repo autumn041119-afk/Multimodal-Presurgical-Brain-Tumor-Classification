@@ -1,0 +1,47 @@
+\contentsline {section}{\numberline {1}Introduction}{3}{section.1}%
+\contentsline {section}{\numberline {2}Dataset and Exploratory Data Analysis}{4}{section.2}%
+\contentsline {subsection}{\numberline {2.1}Dataset Overview}{4}{subsection.2.1}%
+\contentsline {subsection}{\numberline {2.2}Class Distribution}{4}{subsection.2.2}%
+\contentsline {subsection}{\numberline {2.3}Data Modalities}{5}{subsection.2.3}%
+\contentsline {subsubsection}{\numberline {2.3.1}Radiology Reports}{6}{subsubsection.2.3.1}%
+\contentsline {subsubsection}{\numberline {2.3.2}Clinical and Signal Intensity Features}{6}{subsubsection.2.3.2}%
+\contentsline {subsubsection}{\numberline {2.3.3}Cross-Modal Radiomic Ratios}{6}{subsubsection.2.3.3}%
+\contentsline {subsubsection}{\numberline {2.3.4}Deep Image Features}{7}{subsubsection.2.3.4}%
+\contentsline {subsubsection}{\numberline {2.3.5}Radiomic Features}{7}{subsubsection.2.3.5}%
+\contentsline {subsection}{\numberline {2.4}Missing Data Patterns}{7}{subsection.2.4}%
+\contentsline {subsection}{\numberline {2.5}Robustness Considerations}{8}{subsection.2.5}%
+\contentsline {section}{\numberline {3}Methodology}{8}{section.3}%
+\contentsline {subsection}{\numberline {3.1}Feature Engineering}{9}{subsection.3.1}%
+\contentsline {subsection}{\numberline {3.2}Dual-Path Neural Network}{10}{subsection.3.2}%
+\contentsline {subsubsection}{\numberline {3.2.1}Report Encoder}{10}{subsubsection.3.2.1}%
+\contentsline {subsubsection}{\numberline {3.2.2}Tabular Encoder}{11}{subsubsection.3.2.2}%
+\contentsline {subsubsection}{\numberline {3.2.3}Cross-Modal Gate}{11}{subsubsection.3.2.3}%
+\contentsline {subsubsection}{\numberline {3.2.4}Classifier Head}{12}{subsubsection.3.2.4}%
+\contentsline {subsubsection}{\numberline {3.2.5}Training Configuration}{12}{subsubsection.3.2.5}%
+\contentsline {subsection}{\numberline {3.3}Gradient-Boosted Tree Models}{12}{subsection.3.3}%
+\contentsline {subsection}{\numberline {3.4}Ensemble Strategy}{13}{subsection.3.4}%
+\contentsline {section}{\numberline {4}Experiments and Results}{13}{section.4}%
+\contentsline {subsection}{\numberline {4.1}Experimental Setup}{13}{subsection.4.1}%
+\contentsline {subsection}{\numberline {4.2}Modality Solo Performance}{14}{subsection.4.2}%
+\contentsline {subsection}{\numberline {4.3}Class Imbalance Handling}{14}{subsection.4.3}%
+\contentsline {subsection}{\numberline {4.4}Neural Network Training}{15}{subsection.4.4}%
+\contentsline {subsection}{\numberline {4.5}Tree Model Results}{15}{subsection.4.5}%
+\contentsline {subsection}{\numberline {4.6}Per-Class Performance}{16}{subsection.4.6}%
+\contentsline {subsection}{\numberline {4.7}Ensemble Optimization}{17}{subsection.4.7}%
+\contentsline {subsection}{\numberline {4.8}Classification Report}{18}{subsection.4.8}%
+\contentsline {subsection}{\numberline {4.9}ROC-AUC Analysis}{19}{subsection.4.9}%
+\contentsline {subsection}{\numberline {4.10}Report Feature Engineering Ablation}{20}{subsection.4.10}%
+\contentsline {subsection}{\numberline {4.11}Ensemble Configuration Sweep}{21}{subsection.4.11}%
+\contentsline {section}{\numberline {5}Discussion}{21}{section.5}%
+\contentsline {subsection}{\numberline {5.1}Why Reports Dominate}{21}{subsection.5.1}%
+\contentsline {subsection}{\numberline {5.2}Why Raw Radiomics Fail}{22}{subsection.5.2}%
+\contentsline {subsection}{\numberline {5.3}Class Imbalance}{22}{subsection.5.3}%
+\contentsline {subsection}{\numberline {5.4}Robustness to Distribution Shift}{23}{subsection.5.4}%
+\contentsline {subsection}{\numberline {5.5}Why Ensemble Works}{23}{subsection.5.5}%
+\contentsline {subsection}{\numberline {5.6}What Did Not Work}{24}{subsection.5.6}%
+\contentsline {subsection}{\numberline {5.7}Lessons Learned}{25}{subsection.5.7}%
+\contentsline {section}{\numberline {6}Conclusion}{25}{section.6}%
+\contentsline {subsection}{\numberline {6.1}Summary}{25}{subsection.6.1}%
+\contentsline {subsection}{\numberline {6.2}Final Performance}{26}{subsection.6.2}%
+\contentsline {subsection}{\numberline {6.3}Reproducibility}{26}{subsection.6.3}%
+\contentsline {subsection}{\numberline {6.4}Tools}{26}{subsection.6.4}%

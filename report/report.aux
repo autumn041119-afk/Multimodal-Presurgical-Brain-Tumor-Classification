@@ -1,0 +1,150 @@
+\relax 
+\providecommand\hyper@newdestlabel[2]{}
+\providecommand\HyField@AuxAddToFields[1]{}
+\providecommand\HyField@AuxAddToCoFields[2]{}
+\citation{price2024}
+\citation{wang2024}
+\citation{alsentzer2019}
+\citation{chen2016}
+\citation{ke2017}
+\citation{prokhorenkova2018}
+\@writefile{toc}{\contentsline {section}{\numberline {1}Introduction}{3}{section.1}\protected@file@percent }
+\newlabel{sec:intro}{{1}{3}{Introduction}{section.1}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {2}Dataset and Exploratory Data Analysis}{4}{section.2}\protected@file@percent }
+\newlabel{sec:dataset}{{2}{4}{Dataset and Exploratory Data Analysis}{section.2}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.1}Dataset Overview}{4}{subsection.2.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.2}Class Distribution}{4}{subsection.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {1}{\ignorespaces Class distribution of brain tumor types in the training and validation sets (N=2,266). Minority classes (Sellar, Pineal/CP) are highlighted in coral.}}{4}{figure.caption.2}\protected@file@percent }
+\providecommand*\caption@xref[2]{\@setref\relax\@undefined{#1}}
+\newlabel{fig:class_distribution}{{1}{4}{Class distribution of brain tumor types in the training and validation sets (N=2,266). Minority classes (Sellar, Pineal/CP) are highlighted in coral}{figure.caption.2}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {1}{\ignorespaces Class distribution across dataset splits.}}{5}{table.caption.3}\protected@file@percent }
+\newlabel{tab:class_dist}{{1}{5}{Class distribution across dataset splits}{table.caption.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.3}Data Modalities}{5}{subsection.2.3}\protected@file@percent }
+\newlabel{sec:modalities}{{2.3}{5}{Data Modalities}{subsection.2.3}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {2}{\ignorespaces Summary of available data modalities and their standalone Micro-F1 performance (5-fold CV).}}{5}{table.caption.4}\protected@file@percent }
+\newlabel{tab:modalities}{{2}{5}{Summary of available data modalities and their standalone Micro-F1 performance (5-fold CV)}{table.caption.4}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {2}{\ignorespaces Standalone Micro-F1 performance of each data modality (5-fold CV). The dashed line indicates the majority-class baseline (46.6\%). Color encodes discriminative strength: blue (strong), green (moderate), orange (weak), red (near-random).}}{5}{figure.caption.5}\protected@file@percent }
+\newlabel{fig:solo_modality}{{2}{5}{Standalone Micro-F1 performance of each data modality (5-fold CV). The dashed line indicates the majority-class baseline (46.6\%). Color encodes discriminative strength: blue (strong), green (moderate), orange (weak), red (near-random)}{figure.caption.5}{}}
+\citation{alsentzer2019}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.1}Radiology Reports}{6}{subsubsection.2.3.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.2}Clinical and Signal Intensity Features}{6}{subsubsection.2.3.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.3}Cross-Modal Radiomic Ratios}{6}{subsubsection.2.3.3}\protected@file@percent }
+\citation{he2016}
+\@writefile{lot}{\contentsline {table}{\numberline {3}{\ignorespaces Engineered cross-modal ratio features and their clinical significance.}}{7}{table.caption.6}\protected@file@percent }
+\newlabel{tab:ratios}{{3}{7}{Engineered cross-modal ratio features and their clinical significance}{table.caption.6}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.4}Deep Image Features}{7}{subsubsection.2.3.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {2.3.5}Radiomic Features}{7}{subsubsection.2.3.5}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.4}Missing Data Patterns}{7}{subsection.2.4}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {4}{\ignorespaces Missing data patterns in training data and handling strategies.}}{8}{table.caption.7}\protected@file@percent }
+\newlabel{tab:missing}{{4}{8}{Missing data patterns in training data and handling strategies}{table.caption.7}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {2.5}Robustness Considerations}{8}{subsection.2.5}\protected@file@percent }
+\newlabel{sec:shift}{{2.5}{8}{Robustness Considerations}{subsection.2.5}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {3}Methodology}{8}{section.3}\protected@file@percent }
+\newlabel{sec:method}{{3}{8}{Methodology}{section.3}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {3}{\ignorespaces System overview. Radiology reports and clinical features feed into both neural network and tree models. NNXGB uses the NN's 5-d class probabilities as input features for XGBoost. The image path is used only in the ImgTab auxiliary model (dashed arrow). All 6 model probabilities are combined via weighted blend achieving 87.25\% OOF Micro-F1.}}{9}{figure.caption.8}\protected@file@percent }
+\newlabel{fig:system_overview}{{3}{9}{System overview. Radiology reports and clinical features feed into both neural network and tree models. NNXGB uses the NN's 5-d class probabilities as input features for XGBoost. The image path is used only in the ImgTab auxiliary model (dashed arrow). All 6 model probabilities are combined via weighted blend achieving 87.25\% OOF Micro-F1}{figure.caption.8}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.1}Feature Engineering}{9}{subsection.3.1}\protected@file@percent }
+\newlabel{sec:feat_eng}{{3.1}{9}{Feature Engineering}{subsection.3.1}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {5}{\ignorespaces Summary of engineered features.}}{9}{table.caption.9}\protected@file@percent }
+\newlabel{tab:feature_summary}{{5}{9}{Summary of engineered features}{table.caption.9}{}}
+\citation{alsentzer2019}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.2}Dual-Path Neural Network}{10}{subsection.3.2}\protected@file@percent }
+\newlabel{sec:nn}{{3.2}{10}{Dual-Path Neural Network}{subsection.3.2}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.1}Report Encoder}{10}{subsubsection.3.2.1}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {4}{\ignorespaces Report encoder. BioClinicalBERT processes tokenized reports; only the top 2 layers are fine-tuned. A residual connection preserves the original CLS representation.}}{10}{figure.caption.10}\protected@file@percent }
+\newlabel{fig:report_encoder}{{4}{10}{Report encoder. BioClinicalBERT processes tokenized reports; only the top 2 layers are fine-tuned. A residual connection preserves the original CLS representation}{figure.caption.10}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.2}Tabular Encoder}{11}{subsubsection.3.2.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {5}{\ignorespaces Tabular encoder. Five feature groups are encoded separately then concatenated and passed through an MLP. Location uses both a learned embedding and hierarchical anatomical parsing.}}{11}{figure.caption.11}\protected@file@percent }
+\newlabel{fig:tabular_encoder}{{5}{11}{Tabular encoder. Five feature groups are encoded separately then concatenated and passed through an MLP. Location uses both a learned embedding and hierarchical anatomical parsing}{figure.caption.11}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.3}Cross-Modal Gate}{11}{subsubsection.3.2.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {6}{\ignorespaces Cross-modal gate. A single shared scalar $g$ controls bidirectional information flow between report and tabular paths. When the report is clear, $g \approx 0$ and the model relies solely on the report; when ambiguous, $g$ opens to incorporate tabular evidence.}}{11}{figure.caption.12}\protected@file@percent }
+\newlabel{fig:cross_modal_gate}{{6}{11}{Cross-modal gate. A single shared scalar $g$ controls bidirectional information flow between report and tabular paths. When the report is clear, $g \approx 0$ and the model relies solely on the report; when ambiguous, $g$ opens to incorporate tabular evidence}{figure.caption.12}{}}
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.4}Classifier Head}{12}{subsubsection.3.2.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsubsection}{\numberline {3.2.5}Training Configuration}{12}{subsubsection.3.2.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {6}{\ignorespaces Neural network training hyperparameters.}}{12}{table.caption.13}\protected@file@percent }
+\newlabel{tab:nn_params}{{6}{12}{Neural network training hyperparameters}{table.caption.13}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.3}Gradient-Boosted Tree Models}{12}{subsection.3.3}\protected@file@percent }
+\newlabel{sec:tree}{{3.3}{12}{Gradient-Boosted Tree Models}{subsection.3.3}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {3.4}Ensemble Strategy}{13}{subsection.3.4}\protected@file@percent }
+\newlabel{sec:ensemble}{{3.4}{13}{Ensemble Strategy}{subsection.3.4}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {7}{\ignorespaces Ensemble model weights and individual OOF scores (from 5-fold cross-validation). NN receives 40\% weight due to its complementary error pattern on minority classes, despite lower OOF than tree models.}}{13}{table.caption.14}\protected@file@percent }
+\newlabel{tab:ensemble}{{7}{13}{Ensemble model weights and individual OOF scores (from 5-fold cross-validation). NN receives 40\% weight due to its complementary error pattern on minority classes, despite lower OOF than tree models}{table.caption.14}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {4}Experiments and Results}{13}{section.4}\protected@file@percent }
+\newlabel{sec:experiments}{{4}{13}{Experiments and Results}{section.4}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.1}Experimental Setup}{13}{subsection.4.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.2}Modality Solo Performance}{14}{subsection.4.2}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {8}{\ignorespaces Solo modality Micro-F1 (5-fold CV). Data from ML\_experiments.ipynb Cell 6.}}{14}{table.caption.15}\protected@file@percent }
+\newlabel{tab:solo_modality}{{8}{14}{Solo modality Micro-F1 (5-fold CV). Data from ML\_experiments.ipynb Cell 6}{table.caption.15}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.3}Class Imbalance Handling}{14}{subsection.4.3}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {9}{\ignorespaces Class weight sweep (XGBoost, 5-fold CV). Adding weights to tree models hurts Micro-F1. Data from model\_final.ipynb Cell 28.}}{14}{table.caption.16}\protected@file@percent }
+\newlabel{tab:weight_sweep}{{9}{14}{Class weight sweep (XGBoost, 5-fold CV). Adding weights to tree models hurts Micro-F1. Data from model\_final.ipynb Cell 28}{table.caption.16}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {7}{\ignorespaces Class weight sweep: Micro-F1 vs Macro-F1 by α (left) and per-class accuracy by weight strategy (right).}}{15}{figure.caption.17}\protected@file@percent }
+\newlabel{fig:class_weight_sweep}{{7}{15}{Class weight sweep: Micro-F1 vs Macro-F1 by α (left) and per-class accuracy by weight strategy (right)}{figure.caption.17}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.4}Neural Network Training}{15}{subsection.4.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.5}Tree Model Results}{15}{subsection.4.5}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {10}{\ignorespaces Tree model OOF performance (5-fold CV). Data from model\_final.ipynb Cell 20.}}{16}{table.caption.18}\protected@file@percent }
+\newlabel{tab:tree_models}{{10}{16}{Tree model OOF performance (5-fold CV). Data from model\_final.ipynb Cell 20}{table.caption.18}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {8}{\ignorespaces Individual model OOF Micro-F1. MLU models (85.70--86.28\%) cluster tightly. NN receives 40\% ensemble weight despite lower OOF (82.35\%) for complementary minority-class predictions. Final ensemble achieves 87.29\% OOF.}}{16}{figure.caption.19}\protected@file@percent }
+\newlabel{fig:model_comparison}{{8}{16}{Individual model OOF Micro-F1. MLU models (85.70--86.28\%) cluster tightly. NN receives 40\% ensemble weight despite lower OOF (82.35\%) for complementary minority-class predictions. Final ensemble achieves 87.29\% OOF}{figure.caption.19}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.6}Per-Class Performance}{16}{subsection.4.6}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {11}{\ignorespaces Per-class accuracy for all models (5-fold OOF). Data from model\_final.ipynb Cell 20.}}{17}{table.caption.20}\protected@file@percent }
+\newlabel{tab:per_class}{{11}{17}{Per-class accuracy for all models (5-fold OOF). Data from model\_final.ipynb Cell 20}{table.caption.20}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {9}{\ignorespaces Per-class accuracy radar chart. NN (blue) outperforms MLU-CB (green) on minority classes (Sellar 90.6\% vs 71.9\%, Pineal 46.2\% vs 26.9\%), while MLU-CB excels on majority classes.}}{17}{figure.caption.21}\protected@file@percent }
+\newlabel{fig:per_class_accuracy}{{9}{17}{Per-class accuracy radar chart. NN (blue) outperforms MLU-CB (green) on minority classes (Sellar 90.6\% vs 71.9\%, Pineal 46.2\% vs 26.9\%), while MLU-CB excels on majority classes}{figure.caption.21}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.7}Ensemble Optimization}{17}{subsection.4.7}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {12}{\ignorespaces Ensemble weight comparison. Grid-search weights maximize OOF accuracy. Data from model\_final.ipynb Cell 22.}}{18}{table.caption.22}\protected@file@percent }
+\newlabel{tab:ensemble_weights}{{12}{18}{Ensemble weight comparison. Grid-search weights maximize OOF accuracy. Data from model\_final.ipynb Cell 22}{table.caption.22}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {10}{\ignorespaces Ensemble weights. Grid-search found NN=40\% and MLU=60\% (30\% XGB + 30\% LGB) as optimal. The submission uses NN=40\%, XGB=30\%, LGB=20\% yielding 86.98\% OOF.}}{18}{figure.caption.23}\protected@file@percent }
+\newlabel{fig:ensemble_strategy}{{10}{18}{Ensemble weights. Grid-search found NN=40\% and MLU=60\% (30\% XGB + 30\% LGB) as optimal. The submission uses NN=40\%, XGB=30\%, LGB=20\% yielding 86.98\% OOF}{figure.caption.23}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.8}Classification Report}{18}{subsection.4.8}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {13}{\ignorespaces Ensemble classification report (5-fold OOF). Micro-F1=86.94\%. Data from model\_final.ipynb Cell 20 ensemble.}}{18}{table.caption.24}\protected@file@percent }
+\newlabel{tab:class_report}{{13}{18}{Ensemble classification report (5-fold OOF). Micro-F1=86.94\%. Data from model\_final.ipynb Cell 20 ensemble}{table.caption.24}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {11}{\ignorespaces Ensemble confusion matrix. Main errors: Brain Metastase confused with Glioma (83 cases, 28.8\%) and Meningioma (27, 9.4\%). Glioma and Meningioma bleed into each other (43 and 68 cases). Sellar is well-separated (56/64 = 88\%).}}{19}{figure.caption.25}\protected@file@percent }
+\newlabel{fig:confusion_matrix}{{11}{19}{Ensemble confusion matrix. Main errors: Brain Metastase confused with Glioma (83 cases, 28.8\%) and Meningioma (27, 9.4\%). Glioma and Meningioma bleed into each other (43 and 68 cases). Sellar is well-separated (56/64 = 88\%)}{figure.caption.25}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.9}ROC-AUC Analysis}{19}{subsection.4.9}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {14}{\ignorespaces Per-class AUC (One-vs-Rest). Data from model\_final.ipynb Cell 26.}}{19}{table.caption.26}\protected@file@percent }
+\newlabel{tab:per_class_auc}{{14}{19}{Per-class AUC (One-vs-Rest). Data from model\_final.ipynb Cell 26}{table.caption.26}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {12}{\ignorespaces AUC vs accuracy gap per class. Brain Metastase (32\% gap) and Pineal/CP (64\% gap) show the largest disconnects---models discriminate well but fail at hard thresholds. The Sellar class shows a smaller gap (11\%) due to its distinctive location.}}{20}{figure.caption.27}\protected@file@percent }
+\newlabel{fig:auc_accuracy_gap}{{12}{20}{AUC vs accuracy gap per class. Brain Metastase (32\% gap) and Pineal/CP (64\% gap) show the largest disconnects---models discriminate well but fail at hard thresholds. The Sellar class shows a smaller gap (11\%) due to its distinctive location}{figure.caption.27}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.10}Report Feature Engineering Ablation}{20}{subsection.4.10}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {15}{\ignorespaces Feature ablation (5-fold CV). Data from ML\_experiments.ipynb Cells 19, 21--22.}}{20}{table.caption.28}\protected@file@percent }
+\newlabel{tab:feature_ablation}{{15}{20}{Feature ablation (5-fold CV). Data from ML\_experiments.ipynb Cells 19, 21--22}{table.caption.28}{}}
+\@writefile{lof}{\contentsline {figure}{\numberline {13}{\ignorespaces Feature engineering waterfall. Adding report TF-IDF provides the single largest gain, jumping from 66.5\% to 84.3\%. All non-report features combined contribute only $\sim $2\% beyond the report alone.}}{21}{figure.caption.29}\protected@file@percent }
+\newlabel{fig:feature_ablation}{{13}{21}{Feature engineering waterfall. Adding report TF-IDF provides the single largest gain, jumping from 66.5\% to 84.3\%. All non-report features combined contribute only $\sim $2\% beyond the report alone}{figure.caption.29}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {4.11}Ensemble Configuration Sweep}{21}{subsection.4.11}\protected@file@percent }
+\@writefile{lot}{\contentsline {table}{\numberline {16}{\ignorespaces Ensemble configuration comparison. Data from model\_final.ipynb Cells 22 and 23.}}{21}{table.caption.30}\protected@file@percent }
+\newlabel{tab:oof_vs_test}{{16}{21}{Ensemble configuration comparison. Data from model\_final.ipynb Cells 22 and 23}{table.caption.30}{}}
+\@writefile{toc}{\contentsline {section}{\numberline {5}Discussion}{21}{section.5}\protected@file@percent }
+\newlabel{sec:discussion}{{5}{21}{Discussion}{section.5}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.1}Why Reports Dominate}{21}{subsection.5.1}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.2}Why Raw Radiomics Fail}{22}{subsection.5.2}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.3}Class Imbalance}{22}{subsection.5.3}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {14}{\ignorespaces Per-sample predicted probability for the correct class on minority classes. NN (blue) assigns higher probabilities than MLU-CB (green) on Pineal/CP samples (NN median 0.20 vs MLU 0.14; 42.3\% vs 23.1\% above threshold). On Sellar, both models perform well (NN 90.6\% vs MLU 70.3\% above threshold), but NN is more confident.}}{23}{figure.caption.31}\protected@file@percent }
+\newlabel{fig:minority_violin}{{14}{23}{Per-sample predicted probability for the correct class on minority classes. NN (blue) assigns higher probabilities than MLU-CB (green) on Pineal/CP samples (NN median 0.20 vs MLU 0.14; 42.3\% vs 23.1\% above threshold). On Sellar, both models perform well (NN 90.6\% vs MLU 70.3\% above threshold), but NN is more confident}{figure.caption.31}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.4}Robustness to Distribution Shift}{23}{subsection.5.4}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.5}Why Ensemble Works}{23}{subsection.5.5}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {15}{\ignorespaces Model diversity analysis. Left: pairwise prediction disagreement rate. The 3 MLU models show low mutual disagreement ($\sim $2--5\%) since they share the same features. NN and ImgTab disagree most with MLU models ($\sim $15--28\%). Right: error pattern correlation. MLU models make the same mistakes (high correlation $\sim $0.83--0.94), while NN makes different errors (low correlation $\sim $0.34--0.48 with other models), explaining its ensemble contribution.}}{24}{figure.caption.32}\protected@file@percent }
+\newlabel{fig:ensemble_diversity}{{15}{24}{Model diversity analysis. Left: pairwise prediction disagreement rate. The 3 MLU models show low mutual disagreement ($\sim $2--5\%) since they share the same features. NN and ImgTab disagree most with MLU models ($\sim $15--28\%). Right: error pattern correlation. MLU models make the same mistakes (high correlation $\sim $0.83--0.94), while NN makes different errors (low correlation $\sim $0.34--0.48 with other models), explaining its ensemble contribution}{figure.caption.32}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.6}What Did Not Work}{24}{subsection.5.6}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {5.7}Lessons Learned}{25}{subsection.5.7}\protected@file@percent }
+\@writefile{toc}{\contentsline {section}{\numberline {6}Conclusion}{25}{section.6}\protected@file@percent }
+\newlabel{sec:conclusion}{{6}{25}{Conclusion}{section.6}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.1}Summary}{25}{subsection.6.1}\protected@file@percent }
+\bibstyle{unsrt}
+\bibcite{price2024}{1}
+\bibcite{wang2024}{2}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.2}Final Performance}{26}{subsection.6.2}\protected@file@percent }
+\@writefile{lof}{\contentsline {figure}{\numberline {16}{\ignorespaces From baseline to final ensemble: progression of Micro-F1 scores. The report solo turning point at 84.3\% provides the dominant signal. Adding tabular features (+2.2\%) and a 6-model ensemble (+0.8\%) brings the grid-search optimal to 86.9\%. The submission configuration achieves 87.0\% with NN-dominant weighting (40\%).}}{26}{figure.caption.33}\protected@file@percent }
+\newlabel{fig:final_summary}{{16}{26}{From baseline to final ensemble: progression of Micro-F1 scores. The report solo turning point at 84.3\% provides the dominant signal. Adding tabular features (+2.2\%) and a 6-model ensemble (+0.8\%) brings the grid-search optimal to 86.9\%. The submission configuration achieves 87.0\% with NN-dominant weighting (40\%)}{figure.caption.33}{}}
+\@writefile{lot}{\contentsline {table}{\numberline {17}{\ignorespaces Final model summary. Data from model\_final.ipynb Cells 20, 25--27.}}{26}{table.caption.34}\protected@file@percent }
+\newlabel{tab:final_summary}{{17}{26}{Final model summary. Data from model\_final.ipynb Cells 20, 25--27}{table.caption.34}{}}
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.3}Reproducibility}{26}{subsection.6.3}\protected@file@percent }
+\@writefile{toc}{\contentsline {subsection}{\numberline {6.4}Tools}{26}{subsection.6.4}\protected@file@percent }
+\bibcite{he2016}{3}
+\bibcite{devlin2019}{4}
+\bibcite{alsentzer2019}{5}
+\bibcite{chen2016}{6}
+\bibcite{ke2017}{7}
+\bibcite{prokhorenkova2018}{8}
+\bibcite{lin2017}{9}
+\gdef \@abspage@last{27}
