@@ -130,7 +130,7 @@ Cell 23:  Generate submission
 ```
 
 **Output**:
-- `submission.csv` (Kaggle format)
+- `submission.csv`
 - OOF probabilities for all 6 models
 - Per-class metrics (Micro-F1, Macro-F1, AUC)
 
